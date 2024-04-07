@@ -33,14 +33,14 @@ class Program
         // Інформація про книгу
         string назва = "Відьмак";
         string автор = "Анджей Сапковський";
-        int рік = 1993;
-        double ціна = 25.99;
+        int рік = 2012;
+        int ціна = 210;
 
         // Виводимо інформацію про книгу у форматованому рядку
         Console.WriteLine("Інформація про книгу:");
         Console.WriteLine("Назва: {0}", назва);
         Console.WriteLine("Автор: {0}", автор);
         Console.WriteLine("Рік: {0}", рік);
-        Console.WriteLine("Ціна: ${0}", ціна);
+        Console.WriteLine("Ціна: {0}грн", ціна);
     }
 }
