@@ -10,19 +10,19 @@ class Program
     {
         Console.OutputEncoding = Encoding.Unicode;
         // Обчислення величини знижки
-        double price = 15.99; // приклад значення вартості товару
-        int discountPercentage = 10; // приклад значення відсотка знижки
+        double price = 400; // приклад значення вартості товару
+        double discountPercentage = 20; // приклад значення відсотка знижки
 
-        double discount = (discountPercentage / 100) * price;
+        double discount = price * (discountPercentage / 100); 
 
         Console.WriteLine("Сума знижки:" + discount);
         Console.WriteLine("                         ");
 
 
         // Час в секундах
-        int hours = 2; // приклад значення годин
-        int minutes = 30; // приклад значення хвилин
-        int seconds = 45; // приклад значення секунд
+        int hours = 1; // приклад значення годин
+        int minutes = 20; // приклад значення хвилин
+        int seconds = 100; // приклад значення секунд
 
         int totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
