@@ -10,7 +10,7 @@ class Homework4
     static void Main()
     {
         Console.OutputEncoding = Encoding.Unicode;
-        Console.WriteLine("Оберіть void Task для виклику (введіть число від 1 до 2):");
+        Console.WriteLine("Оберіть void Task для виклику (введіть число від 1 до 4):");
         int choice = int.Parse(Console.ReadLine());
 
         switch (choice)
@@ -21,8 +21,14 @@ class Homework4
             case 2:
                 Task2();
                 break;
+            case 3:
+                Task3();
+                break;
+            case 4:
+                Task4();
+                break;
             default:
-                Console.WriteLine("Невірний вибір. Будь ласка, введіть число від 1 до 2.");
+                Console.WriteLine("Невірний вибір. Будь ласка, введіть число від 1 до 4.");
                 break;
         }
 
@@ -87,5 +93,73 @@ class Homework4
                     break;
             }
         } while(true);
+    }
+
+    static void Task3()
+    {
+        Console.WriteLine("Введіть число від 1 до 100: ");
+        int число = int.Parse(Console.ReadLine());
+
+        string результат = (число % 15 == 0) ? "FizzBuzz" : (число % 3 == 0) ? "Fizz" : (число % 5 == 0) ? "Buzz" : число.ToString();
+
+        Console.WriteLine(результат);
+    }
+
+    static void Task4()
+    {
+        double a, b, c;
+
+        Console.WriteLine("Введіть значення коефіцієнта a: ");
+        while (!double.TryParse(Console.ReadLine(), out a))
+        {
+            Console.WriteLine("Некоректне значення. Спробуйте ще раз:");
+        }
+
+        Console.WriteLine("Введіть значення коефіцієнта b: ");
+        while (!double.TryParse(Console.ReadLine(), out b))
+        {
+            Console.WriteLine("Некоректне значення. Спробуйте ще раз:");
+        }
+
+        Console.WriteLine("Введіть значення коефіцієнта c: ");
+        while (!double.TryParse(Console.ReadLine(), out c))
+        {
+            Console.WriteLine("Некоректне значення. Спробуйте ще раз:");
+        }
+
+        ВивестиРівняння(a, b, c);
+
+        double D = ОбчислитиДискримінант(a, b, c);
+
+        ВивестиКорені(a, b, D);
+    }
+
+    static void ВивестиРівняння(double a, double b, double c)
+    {
+        Console.WriteLine($"Рівняння: {a} * x^2 + {b} * x + {c} = 0");
+    }
+
+    static double ОбчислитиДискримінант(double a, double b, double c)
+    {
+        return b * b - 4 * a * c;
+    }
+
+    static void ВивестиКорені(double a, double b, double D)
+    {
+        if (D < 0)
+        {
+            Console.WriteLine("Рівняння не має коренів");
+        }
+        else if (D == 0)
+        {
+            double корінь = -b / (2 * a);
+            Console.WriteLine($"Рівняння має один корінь: {корінь}");
+        }
+        else
+        {
+            double корінь1 = (-b + Math.Sqrt(D)) / (2 * a);
+            double корінь2 = (-b - Math.Sqrt(D)) / (2 * a);
+            Console.WriteLine($"Рівняння має два корені: {корінь1} та {корінь2}");
+        }
     }
 }
