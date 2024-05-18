@@ -1,11 +1,10 @@
 ﻿using System;
-using UkrainianStringLibrary;
 
-namespace ConsoleApp
+namespace Homework11
 {
-    class Program
+    class Master
     {
-        static void Main(string[] args)
+        static void First(string[] args)
         {
             while (true)
             {

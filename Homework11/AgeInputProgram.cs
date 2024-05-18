@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace AgeInputApp
+namespace Homework11
 {
-    class Program
+    class AgeInputProgram
     {
-        static void Main(string[] args)
+        static void Age(string[] args)
         {
             while (true)
             {

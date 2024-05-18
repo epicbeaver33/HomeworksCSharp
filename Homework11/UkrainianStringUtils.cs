@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace UkrainianStringLibrary
+namespace Homework11
 {
     public static class UkrainianStringUtils
     {
