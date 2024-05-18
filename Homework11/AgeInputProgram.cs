@@ -4,7 +4,7 @@ namespace Homework11
 {
     class AgeInputProgram
     {
-        static void Age(string[] args)
+        public void Age()
         {
             while (true)
             {

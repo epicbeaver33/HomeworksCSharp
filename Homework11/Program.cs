@@ -1,20 +1,25 @@
 ﻿using System;
+using System.Text;
 
 namespace Homework11
 {
     class Master
     {
-        static void First(string[] args)
+        static void Main(string[] args)
         {
             while (true)
             {
+                Console.OutputEncoding = Encoding.Unicode;
+                Console.InputEncoding = Encoding.Unicode;
+
                 Console.WriteLine("Оберіть дію:");
                 Console.WriteLine("1. Підрахувати кількість голосних літер");
                 Console.WriteLine("2. Підрахувати кількість приголосних літер");
                 Console.WriteLine("3. Обернути рядок");
                 Console.WriteLine("4. Видалити дублікати символів");
                 Console.WriteLine("5. Видалити знаки пунктуації");
-                Console.WriteLine("6. Вийти");
+                Console.WriteLine("6. Обробка вводу віку користувача");
+                Console.WriteLine("7. Вийти");
 
                 string choice = Console.ReadLine();
 
@@ -57,6 +62,13 @@ namespace Homework11
                         break;
 
                     case "6":
+                        // Завершення програми
+                        // Виклик методу для запиту віку з іншого класу
+                        AgeInputProgram ageInputProgram = new AgeInputProgram();
+                        ageInputProgram.Age();
+                        return;
+
+                    case "7":
                         // Завершення програми
                         Console.WriteLine("Вихід з програми.");
                         return;
