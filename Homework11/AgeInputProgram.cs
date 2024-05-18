@@ -25,7 +25,7 @@ namespace Homework11
 
                     // Вивід віку користувача
                     Console.WriteLine($"Ваш вік: {age}");
-                    break;
+                    
                 }
                 catch (FormatException ex)
                 {

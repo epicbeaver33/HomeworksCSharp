@@ -62,7 +62,6 @@ namespace Homework11
                         break;
 
                     case "6":
-                        // Завершення програми
                         // Виклик методу для запиту віку з іншого класу
                         AgeInputProgram ageInputProgram = new AgeInputProgram();
                         ageInputProgram.Age();
